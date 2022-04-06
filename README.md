@@ -1,6 +1,6 @@
 # Szechuan
 ## Week 1 Tasks
-- [ ] Setup GitHub Repository (Etesam)
+- [x] Setup GitHub Repository (Etesam)
 - [ ] Basic VR Movement (Mikey)
 - [ ] Task System UI & Coding Implementation (Etesam)
 - [ ] Creation of scenes (kitchen / dining area) using asset packs (Elan)
