@@ -2,7 +2,7 @@
 ## Week 1 Tasks
 - [x] Setup GitHub Repository (Etesam)
 - [x] Basic VR Movement (Mikey)
-- [ ] Task System UI & Coding Implementation (Etesam)
+- [x] Task System UI & Coding Implementation (Etesam)
 - [ ] Creation of scenes (kitchen / dining area) using asset packs (Elan)
 - [ ] Selection of items (hovered items should be clearly discernable) (Sai)
 
