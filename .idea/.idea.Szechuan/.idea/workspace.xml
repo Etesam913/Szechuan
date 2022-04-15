@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c30a0045-7595-4c27-b3d6-6bed8e27dd8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cooking.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cooking.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649606689688</updated>
       <workItem from="1649632747320" duration="2855000" />
+      <workItem from="1650052310440" duration="126000" />
     </task>
     <servers />
   </component>
