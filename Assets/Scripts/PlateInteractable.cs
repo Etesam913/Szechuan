@@ -18,11 +18,6 @@ public class PlateInteractable : MonoBehaviour
         myWaiterPathLogic = waiterWrapper.GetComponent<WaiterPathLogic>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     /*
     If a collision occurs between [EXAMPLE PLATE] and object,
@@ -31,9 +26,9 @@ public class PlateInteractable : MonoBehaviour
     disable the path mesh, and finally, choose a new table.
     */
     private void OnTriggerEnter(Collider other) {
-        int table = getSelectedNumber();
-        string tableTag = "T" + table.ToString();
-        string pathTag = "P" + table.ToString();
+        int tableNumber = getSelectedNumber();
+        string tableTag = "T" + tableNumber.ToString();
+        string pathTag = "P" + tableNumber.ToString();
         if (other.gameObject.CompareTag(tableTag + "H")) {
             GameObject.FindGameObjectWithTag(tableTag).GetComponent<MeshRenderer>().enabled = true;
             GameObject.FindGameObjectWithTag(tableTag + "H").GetComponent<MeshRenderer>().enabled = false;
@@ -42,7 +37,7 @@ public class PlateInteractable : MonoBehaviour
                 r.enabled = false;
             
             myWaiterPathLogic.chooseNewTable();
-            print("Plate dropped on correct table: " + table.ToString() + "!");
+            print("Plate dropped on correct table: " + tableNumber.ToString() + "!");
         }
     }
 
