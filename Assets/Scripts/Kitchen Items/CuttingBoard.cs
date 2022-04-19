@@ -9,7 +9,6 @@ namespace Kitchen_Items
         [SerializeField] private GameObject slicedCarrotPrefab;
         [SerializeField] private GameObject slicedBellPepperPrefab;
         [SerializeField] private GameObject slicedOnionPrefab;
-        [SerializeField] private TextMeshProUGUI debugText;
         private string _carrotTag = "Carrot";
 
         private string _bellPepperTag = "BellPepper";
@@ -29,22 +28,22 @@ namespace Kitchen_Items
 
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log(other.gameObject.name);
             if (other.CompareTag(_carrotTag))
             {
                 // instantiate sliced carrot
-                debugText.text = other.transform.parent.name;
                 GameObject slicedCarrot1 = Instantiate(slicedCarrotPrefab, transform, false) as GameObject;
                 slicedCarrot1.transform.localPosition = new Vector3(0, 5, 0);
                 GameObject slicedCarrot2 = Instantiate(slicedCarrotPrefab, transform, false) as GameObject;
                 slicedCarrot2.transform.localPosition = new Vector3(0, 5, 0);
                 slicedCarrot2.transform.localScale = new Vector3(24, 24, 24);
                 
-                Destroy(other.transform.parent.gameObject);
+                Destroy(other.gameObject);
             }
             if (other.CompareTag(_bellPepperTag))
             {
                 // instantiate sliced bell pepper
-                debugText.text = other.transform.parent.name;
+                
                 GameObject slicedBellPepper = Instantiate(slicedBellPepperPrefab, transform, false) as GameObject;
                 slicedBellPepper.transform.localPosition = new Vector3(3.72f, 5, 0);
                 Destroy(other.gameObject);
@@ -52,11 +51,11 @@ namespace Kitchen_Items
             if (other.CompareTag(_onionTag))
             {
                 // instantiate sliced onion
-                debugText.text = other.transform.parent.name;
+                
                 GameObject slicedOnions = Instantiate(slicedOnionPrefab, transform, false) as GameObject;
                 slicedOnions.transform.localPosition = new Vector3(3.72f, 5, 0);
 
-                Destroy(other.transform.parent.gameObject);
+                Destroy(other.gameObject);
             }
             
         }
