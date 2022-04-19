@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 7109870971185685861}
   - component: {fileID: 5367299713047485487}
   - component: {fileID: 8888347029032630459}
-  - component: {fileID: 8026816064339288244}
   - component: {fileID: 88152851117776816}
   - component: {fileID: 4974044609762179742}
-  m_Layer: 0
+  - component: {fileID: 4456826566186959427}
+  m_Layer: 7
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Carrot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8026816064339288244
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025910118528087646}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.049790002, y: 0.050241, z: 0.258103}
-  m_Center: {x: 0.00023900066, y: -0.0014204998, z: 0.020641498}
 --- !u!54 &88152851117776816
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -228,6 +215,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!64 &4456826566186959427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025910118528087646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 790e94973249c4d9cb9c130b0dff6095, type: 3}
 --- !u!1 &7030314064204992135
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7699855500395893821}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,6 +1,15 @@
 # Szechuan
 
+## Important Notes
+
+### To make a gameobject grabbable make sure to:
+
+1. Add a rigidbody to it for gravity to take effect
+2. Add the XR Grab Interactable script to it
+3. Set the layer (found in top right corner) to "Interactable". Prevents collision between a grabbed object & the player.
+
 ## Week 2 Tasks
+
 - [ ] Implement rudimentary cutting of items (Etesam)
 - [ ] Putting of items into the pan (Etesam)
 - [ ] Move Pan to Stove (Mikey)
@@ -14,14 +23,15 @@
 - [ ] Check for time elapsed vs time requirement (Sai)
 
 ## Week 1 Tasks
+
 - [x] Setup GitHub Repository (Etesam)
 - [x] Basic VR Movement (Mikey)
 - [x] Task System UI & Coding Implementation (Etesam)
 - [x] Creation of scenes (kitchen / dining area) using asset packs (Elan)
 - [x] Selection of items (hovered items should be clearly discernable) (Sai)
 
-
 ## Asset Packs of Interest
+
 - Restaurant Assets
   - https://assetstore.unity.com/packages/3d/props/interior/restaurant-interior-full-pack-153273
 - Human Assets

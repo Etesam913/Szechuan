@@ -6,6 +6,9 @@ TagManager:
   tags:
   - GameManager
   - Interactable
+  - Carrot
+  - Onion
+  - BellPepper
   layers:
   - Default
   - TransparentFX
