@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c30a0045-7595-4c27-b3d6-6bed8e27dd8e" name="Changes" comment="">
+    <list default="true" id="a72c4b74-e83f-46e5-9cc5-5f74c88d9eed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlateInteractable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/carrot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/carrot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/onion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/onion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/CuttingBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/CuttingBoard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

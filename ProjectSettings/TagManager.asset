@@ -50,6 +50,7 @@ TagManager:
   - TableParent9
   - TableParent10
   - TableParent11
+  - BellPepper
   layers:
   - Default
   - TransparentFX
