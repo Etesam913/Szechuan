@@ -6,6 +6,50 @@ TagManager:
   tags:
   - GameManager
   - Interactable
+  - T1
+  - T2
+  - T3
+  - T4
+  - T5
+  - T6
+  - T7
+  - T8
+  - T9
+  - T10
+  - T11
+  - P1
+  - P2
+  - P3
+  - P4
+  - P5
+  - P6
+  - P7
+  - P8
+  - P9
+  - P10
+  - P11
+  - T1H
+  - T2H
+  - T3H
+  - T4H
+  - T5H
+  - T6H
+  - T7H
+  - T8H
+  - T9H
+  - T10H
+  - T11H
+  - TableParent1
+  - TableParent2
+  - TableParent3
+  - TableParent4
+  - TableParent5
+  - TableParent6
+  - TableParent7
+  - TableParent8
+  - TableParent9
+  - TableParent10
+  - TableParent11
   layers:
   - Default
   - TransparentFX
