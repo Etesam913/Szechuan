@@ -1,8 +1,8 @@
 # Szechuan
 
 ## Week 2 Tasks
-- [ ] Implement rudimentary cutting of items (Etesam)
-- [ ] Putting of items into the pan (Etesam)
+- [x] Implement rudimentary cutting of items (Etesam)
+- [x] Putting of items into the pan (Etesam)
 - [ ] Move Pan to Stove (Mikey)
 - [ ] Watch food get cooked (Mikey)
 - [ ] Place dishes on counter when complete (Mikey)
