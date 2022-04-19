@@ -1,10 +1,25 @@
 # Szechuan
+
+## Week 2 Tasks
+- [ ] Implement rudimentary cutting of items (Etesam)
+- [ ] Putting of items into the pan (Etesam)
+- [ ] Move Pan to Stove (Mikey)
+- [ ] Watch food get cooked (Mikey)
+- [ ] Place dishes on counter when complete (Mikey)
+- [ ] Show wayfinding visual to table (Elan)
+- [ ] Being able to retrieve dish from counter (Elan)
+- [ ] Place dish on table after people are done eating (Elan)
+- [ ] Be able to determine if food is overcooked, undercooked, perfect (Sai)
+- [ ] Check correctness of ingredients when dish is done cooking (Sai)
+- [ ] Check for time elapsed vs time requirement (Sai)
+
 ## Week 1 Tasks
 - [x] Setup GitHub Repository (Etesam)
 - [x] Basic VR Movement (Mikey)
 - [x] Task System UI & Coding Implementation (Etesam)
 - [x] Creation of scenes (kitchen / dining area) using asset packs (Elan)
-- [ ] Selection of items (hovered items should be clearly discernable) (Sai)
+- [x] Selection of items (hovered items should be clearly discernable) (Sai)
+
 
 ## Asset Packs of Interest
 - Restaurant Assets
