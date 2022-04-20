@@ -7,6 +7,11 @@ public class PlateInteractable : MonoBehaviour
 
     public GameObject waiterWrapper;
     private WaiterPathLogic myWaiterPathLogic;
+    private Vector3 platePosition;
+
+    private bool timerStarted = false;
+    private float offsetTime = 1f;
+    private float timer;
 
     // Start is called before the first frame update
     /*
@@ -16,6 +21,20 @@ public class PlateInteractable : MonoBehaviour
     void Start()
     {
         myWaiterPathLogic = waiterWrapper.GetComponent<WaiterPathLogic>();
+        platePosition = new Vector3(-6.3f, -0.04f, 34.7f);
+    }
+
+    void Update() {
+        if (timerStarted) {
+            timer += Time.deltaTime;
+            if(timer > offsetTime) {
+                timer = 0f;
+                this.transform.position = platePosition;
+                this.transform.eulerAngles = new Vector3(0, 0, 0);
+                timerStarted = false;
+                print(this.transform.position);
+            }
+        }
     }
 
 
@@ -38,6 +57,7 @@ public class PlateInteractable : MonoBehaviour
             
             myWaiterPathLogic.chooseNewTable();
             print("Plate dropped on correct table: " + tableNumber.ToString() + "!");
+            timerStarted = true;
         }
     }
 
