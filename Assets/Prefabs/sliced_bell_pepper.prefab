@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1300120458584034143}
   - component: {fileID: 9208334803829945302}
   - component: {fileID: 7948352461356664878}
+  - component: {fileID: -981969203581917842}
+  - component: {fileID: -1938860745796821051}
   m_Layer: 7
   m_Name: sliced_bell_pepper
   m_TagString: Untagged
@@ -113,7 +115,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &7948352461356664878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,3 +231,32 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!65 &-981969203581917842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219040392330065419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.072078586, y: 0.06166804, z: 0.044414733}
+  m_Center: {x: 0.00004750304, y: 0.0045799767, z: 0.00056063844}
+--- !u!114 &-1938860745796821051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219040392330065419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2df2f8777e84e09b3d32b5426b9f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookedTime: 5
+  overcookedTime: 10
+  cookedMat: {fileID: 2100000, guid: 5f64daa6f36c5476f9d1305152326031, type: 2}
+  overcookedMat: {fileID: 2100000, guid: d1bf4e9c26487456e9257fc3a9298ce8, type: 2}

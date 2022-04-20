@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5260233673186838908}
   - component: {fileID: 5260233673186838911}
   - component: {fileID: 5380367088893397020}
+  - component: {fileID: 1654221648360624365}
+  - component: {fileID: -3461626923346410870}
   m_Layer: 7
   m_Name: sliced_onions
   m_TagString: Untagged
@@ -99,7 +101,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5260233673186838911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,3 +231,32 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -153830957423991239, guid: 171d964b8b3bb43f3ab7047189df02c5, type: 3}
+--- !u!65 &1654221648360624365
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026425609796236329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.034756105, y: 0.03902298, z: 0.00531452}
+  m_Center: {x: -0.0024921023, y: 0.0006461115, z: 0.0007665055}
+--- !u!114 &-3461626923346410870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026425609796236329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2df2f8777e84e09b3d32b5426b9f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookedTime: 5
+  overcookedTime: 10
+  cookedMat: {fileID: 2100000, guid: 5f64daa6f36c5476f9d1305152326031, type: 2}
+  overcookedMat: {fileID: 2100000, guid: d1bf4e9c26487456e9257fc3a9298ce8, type: 2}
