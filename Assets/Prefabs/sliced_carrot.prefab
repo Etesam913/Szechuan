@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7614572436958047080}
   - component: {fileID: 4621393265181709562}
   - component: {fileID: 2417739147755291209}
+  - component: {fileID: 5637389493969596359}
+  - component: {fileID: -8596816998686173021}
   m_Layer: 7
   m_Name: sliced_carrot
   m_TagString: Untagged
@@ -99,7 +101,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &4621393265181709562
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -229,3 +231,32 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5637389493969596359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109691848659402065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2df2f8777e84e09b3d32b5426b9f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookedTime: 5
+  overcookedTime: 10
+  cookedMat: {fileID: 2100000, guid: 5f64daa6f36c5476f9d1305152326031, type: 2}
+  overcookedMat: {fileID: 2100000, guid: d1bf4e9c26487456e9257fc3a9298ce8, type: 2}
+--- !u!65 &-8596816998686173021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109691848659402065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03216804, y: 0.03216803, z: 0.006677173}
+  m_Center: {x: 0, y: 0, z: 0}
