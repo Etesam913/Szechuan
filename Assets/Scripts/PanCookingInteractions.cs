@@ -24,8 +24,11 @@ public class PanCookingInteractions : MonoBehaviour
             {
                 var food = childTrans.gameObject;
                 var cookedState = food.GetComponent<FoodCookedState>();
-                if(cookedState != null)
+                if (cookedState != null)
                     cookedState.IncreaseTimeCooked(dt);
+                else {
+                    cookedState.NoInteraction();
+                }
             }
         }
     }
