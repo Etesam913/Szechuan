@@ -1,5 +1,25 @@
 # Szechuan
 
+## Week 3 Tasks
+- [ ] Add noodles dish (Etesam)
+- [ ] Add ability to add oil to pan (Etesam)
+- [ ] Add progress bar UI for cooking (Etesam)
+- [ ] Cross of blackboard when dish is complete & plated (Etesam)
+- [ ] Create refrigerator that opens and closes on select (Mikey)
+- [ ] Put all ingredients in refrigerator (Mikey)
+- [ ] Add people/walls to restaurant (Elan)
+    * People walking around, point loss on bumping into them, plate will drop
+    * Complete scenery walls with some art
+- [ ] When all dishes are in their plates then the player spawns in the second stage (waiter)(Elan)
+   * Fade out screen
+   * Display text “Level is Complete”
+   * Next stage button will take you to waiter stage
+- [ ] Field of View (FOV - blur the unimportant corners when moving: Motion Sickness) (Sai)
+
+
+
+
+
 ## Week 2 Tasks
 - [x] Implement rudimentary cutting of items (Etesam)
 - [x] Putting of items into the pan (Etesam)
@@ -9,9 +29,9 @@
 - [x] Show wayfinding visual to table (Elan)
 - [x] Being able to retrieve dish from counter (Elan)
 - [x] Place dish on table after people are done eating (Elan)
-- [ ] Be able to determine if food is overcooked, undercooked, perfect (Sai)
-- [ ] Check correctness of ingredients when dish is done cooking (Sai)
-- [ ] Check for time elapsed vs time requirement (Sai)
+- [x] Be able to determine if food is overcooked, undercooked, perfect (Sai)
+- [x] Check correctness of ingredients when dish is done cooking (Sai)
+- [x] Check for time elapsed vs time requirement (Sai)
 
 ## Week 1 Tasks
 - [x] Setup GitHub Repository (Etesam)
