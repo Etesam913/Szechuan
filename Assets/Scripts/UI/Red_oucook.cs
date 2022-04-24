@@ -8,7 +8,7 @@ public class Red_oucook : MonoBehaviour
     private CanvasGroup canvasGroup;
     void Start()
     {
-        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0;
     }
 

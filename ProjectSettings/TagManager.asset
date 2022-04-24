@@ -51,6 +51,9 @@ TagManager:
   - TableParent10
   - TableParent11
   - BellPepper
+  - Onion
+  - Carrot
+  - NoodlePart
   layers:
   - Default
   - TransparentFX
