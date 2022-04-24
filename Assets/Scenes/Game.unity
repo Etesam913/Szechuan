@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4601,6 +4601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696875102}
   - component: {fileID: 696875103}
+  - component: {fileID: 696875104}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: GameManager
@@ -4652,6 +4653,22 @@ MonoBehaviour:
     - Parmesan Cheese
     - Black Pepper
     timeRemaining: 90
+--- !u!114 &696875104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696875101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0450466dda404429b831cfba2cab1320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableFood:
+  - sliced_onion
+  - sliced_carrot
+  - sliced_bell_pepper
 --- !u!1 &700265405
 GameObject:
   m_ObjectHideFlags: 0
@@ -9294,6 +9311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4122d9da19b6a8d4980b44af5ae2ab87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: 12
 --- !u!1001 &1130108161
 PrefabInstance:
   m_ObjectHideFlags: 0

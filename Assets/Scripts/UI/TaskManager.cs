@@ -64,8 +64,5 @@ namespace UI
             
         }
 
-        void Update()
-        {
-        }
     }
 }
