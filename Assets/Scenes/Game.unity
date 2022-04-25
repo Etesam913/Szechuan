@@ -226,15 +226,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -928,15 +928,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1649,15 +1649,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3603,7 +3603,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.052690506, y: 0, z: 0.78410816, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4139,15 +4139,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4663,19 +4663,33 @@ MonoBehaviour:
   tasks:
   - name: Sauteed Vegetables
     ingredients:
-    - 2 Carrots
-    - 1 Red Onion
-    - Olive Oil
-    - 1 Bell Pepper
+    - name: Carrots
+      quantity: 2
+      plateIdentifier: sliced_carrot
+    - name: Onion
+      quantity: 1
+      plateIdentifier: sliced_onions
+    - name: Bell Pepper
+      quantity: 1
+      plateIdentifier: sliced_bell_pepper
     timeRemaining: 35
-  - name: Spaghetti Carbonara
+    isCompleted: 0
+  - name: Pasta Penne
     ingredients:
-    - Spaghetti Noodles
-    - Garlic
-    - Eggs
-    - Parmesan Cheese
-    - Black Pepper
+    - name: Pasta Pieces
+      quantity: 6
+      plateIdentifier: pasta_penne
+    - name: Oil
+      quantity: 1
+      plateIdentifier: oil
+    - name: Mushrooms
+      quantity: 2
+      plateIdentifier: sliced_mushroom
+    - name: Garlic
+      quantity: 1
+      plateIdentifier: sliced_garlic
     timeRemaining: 90
+    isCompleted: 0
 --- !u!114 &696875104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,10 +4702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0450466dda404429b831cfba2cab1320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableFood:
-  - sliced_onion
-  - sliced_carrot
-  - sliced_bell_pepper
 --- !u!1 &700265405
 GameObject:
   m_ObjectHideFlags: 0
@@ -5180,15 +5190,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6841,15 +6851,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7938,15 +7948,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8918,8 +8928,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: food_holding_plate
       objectReference: {fileID: 0}
+    - target: {fileID: 8194582690698966918, guid: 5a798109dde7949ef9ef244257889fad, type: 3}
+      propertyPath: taskManager
+      value: 
+      objectReference: {fileID: 696875103}
+    - target: {fileID: 8196869512277657182, guid: 5a798109dde7949ef9ef244257889fad, type: 3}
+      propertyPath: taskManager
+      value: 
+      objectReference: {fileID: 696875103}
     m_RemovedComponents:
     - {fileID: 8594261794902585393, guid: 5a798109dde7949ef9ef244257889fad, type: 3}
+    - {fileID: 6232199325892705502, guid: 5a798109dde7949ef9ef244257889fad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a798109dde7949ef9ef244257889fad, type: 3}
 --- !u!1 &1031294169
 GameObject:
@@ -10714,15 +10733,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10943,15 +10962,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15160,15 +15179,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15252,15 +15271,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17276,15 +17295,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.002925
+      value: 0.0024375
       objectReference: {fileID: 0}
     - target: {fileID: 7665868642189827746, guid: b0d1b7500bf1541a3bb8ac3ff6fb821a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17801,9 +17820,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814710879}
     m_Modifications:
+    - target: {fileID: 927202277462571543, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.29548597
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202277881277430, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.36518764
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202277940638565, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.38529298
+      objectReference: {fileID: 0}
     - target: {fileID: 927202278021268411, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
       propertyPath: m_fontSize
       value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202278021268411, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.37190247
       objectReference: {fileID: 0}
     - target: {fileID: 927202278021268411, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
       propertyPath: m_fontSizeMax
@@ -17816,6 +17851,10 @@ PrefabInstance:
     - target: {fileID: 927202278021268411, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
       propertyPath: m_enableAutoSizing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202278085166479, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.40356016
       objectReference: {fileID: 0}
     - target: {fileID: 927202278373671463, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
       propertyPath: m_Pivot.x
@@ -17904,6 +17943,18 @@ PrefabInstance:
     - target: {fileID: 927202278373671512, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
       propertyPath: m_Name
       value: DishPanel 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202278390462702, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.44781208
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202278421163141, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.44334412
+      objectReference: {fileID: 0}
+    - target: {fileID: 927202278497716984, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}
+      propertyPath: m_margin.x
+      value: 0.30393744
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8620e16e4569e479d8a5bb06542b93ee, type: 3}

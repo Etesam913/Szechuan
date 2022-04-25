@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a72c4b74-e83f-46e5-9cc5-5f74c88d9eed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/pixelfont SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/pixelfont SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/food_holding_plate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/food_holding_plate.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/PanInteractions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/PanInteractions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateFoodInteractions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateFoodInteractions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Green_perfection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Green_perfection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Red_oucook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Red_oucook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateInteractable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateInteractable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TaskManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WaiterPathLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WaiterPathLogic.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Locomotion/Continuous/ActionBasedContinuousMoveProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Inputs/Interactions/SectorInteraction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Interaction/Interactors/XRRayInteractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kitchen Items/CheckTaskCompletion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Locomotion/LocomotionSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -85,7 +87,7 @@
       <workItem from="1649632747320" duration="2855000" />
       <workItem from="1650052310440" duration="1834000" />
       <workItem from="1650774163854" duration="3851000" />
-      <workItem from="1650834258250" duration="3947000" />
+      <workItem from="1650834258250" duration="7916000" />
     </task>
     <servers />
   </component>
