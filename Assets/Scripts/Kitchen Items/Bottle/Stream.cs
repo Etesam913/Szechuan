@@ -10,6 +10,7 @@ public class Stream : MonoBehaviour
     private Coroutine pourRoutine = null;
     
     private Vector3 targetPosition = Vector3.zero;
+    [SerializeField] private GameObject oilPrefab;
 
     private void Awake()
     {
@@ -66,6 +67,28 @@ public class Stream : MonoBehaviour
 
         Physics.Raycast(ray, out hit, 10.0f);
         Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(10.0f);
+        
+        // Oil hits pan
+        if(hit.collider.gameObject.name == "pan_inside_trigger")
+        {
+            Transform panParent = hit.collider.transform.parent;
+            int childCount = panParent.childCount;
+            bool hasOil = false;
+            for (int i = 0; i < childCount; i++)
+            {
+                if (panParent.GetChild(i).gameObject.name.Contains("oil"))
+                {
+                    hasOil = true;
+                }
+            }
+
+            if (!hasOil)
+            {
+                GameObject oil = Instantiate(oilPrefab, panParent.transform.position, Quaternion.identity);
+                oil.transform.parent = panParent;
+                hasOil = true;
+            }
+        }
         return endPoint;
     }
 

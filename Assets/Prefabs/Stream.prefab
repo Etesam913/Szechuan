@@ -4969,3 +4969,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01455f4992a814382a154d0455dc0860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oilPrefab: {fileID: 7102281472060195981, guid: aaabc5df772a04120b481391eb93d543, type: 3}

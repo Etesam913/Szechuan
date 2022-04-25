@@ -53,7 +53,8 @@ TagManager:
   - BellPepper
   - Onion
   - Carrot
-  - NoodlePart
+  - Garlic
+  - Mushroom
   layers:
   - Default
   - TransparentFX
