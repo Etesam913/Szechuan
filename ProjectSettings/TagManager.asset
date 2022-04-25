@@ -51,6 +51,10 @@ TagManager:
   - TableParent10
   - TableParent11
   - BellPepper
+  - Onion
+  - Carrot
+  - Garlic
+  - Mushroom
   layers:
   - Default
   - TransparentFX

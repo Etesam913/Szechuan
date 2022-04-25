@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a72c4b74-e83f-46e5-9cc5-5f74c88d9eed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Szechuan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/carrot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/carrot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/onion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/onion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stream.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stream.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pasta_penne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pasta_penne.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/AddChildOnTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/AddChildOnTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/Bottle/Stream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/Bottle/Stream.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/CuttingBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kitchen Items/CuttingBoard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +26,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kitchen Items/AddChildOnTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Locomotion/Continuous/ActionBasedContinuousMoveProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Inputs/Interactions/SectorInteraction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Interaction/Interactors/XRRayInteractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kitchen Items/CheckTaskCompletion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.0.1/Runtime/Locomotion/LocomotionSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -69,13 +77,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c30a0045-7595-4c27-b3d6-6bed8e27dd8e" name="Changes" comment="" />
+      <changelist id="a72c4b74-e83f-46e5-9cc5-5f74c88d9eed" name="Changes" comment="" />
       <created>1649606689688</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649606689688</updated>
       <workItem from="1649632747320" duration="2855000" />
       <workItem from="1650052310440" duration="1834000" />
+      <workItem from="1650774163854" duration="3851000" />
+      <workItem from="1650834258250" duration="11418000" />
     </task>
     <servers />
   </component>
