@@ -23,7 +23,6 @@ public class WaiterPathLogic : MonoBehaviour
             foreach(MeshRenderer r in rs)
                 r.enabled = false;
         }
-        chooseNewTable();
     }
 
     // Update is called once per frame
@@ -53,5 +52,19 @@ public class WaiterPathLogic : MonoBehaviour
         MeshRenderer[] rs = GameObject.FindGameObjectWithTag(pathTag).GetComponentsInChildren<MeshRenderer>();
         foreach(MeshRenderer r in rs)
             r.enabled = true;
+    }
+
+    /*
+    We fade to black and the user clicks advance to start the waiter stage.
+    */
+    public void fadeToBlack() {
+
+    }
+
+    /*
+    When the game starts, we run choose new table and disappear the UI.
+    */
+    public void startWaiterStage() {
+        chooseNewTable();
     }
 }
