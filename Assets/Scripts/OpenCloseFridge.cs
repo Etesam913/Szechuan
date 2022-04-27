@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class OpenCloseFridge : MonoBehaviour
 {
@@ -14,7 +13,6 @@ public class OpenCloseFridge : MonoBehaviour
     private int elapsedFrames;
 
     public Transform doorAxis;
-
     // Start is called before the first frame update
     void Start()
     {

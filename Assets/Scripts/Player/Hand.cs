@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(Animator))]
 public class Hand : MonoBehaviour
@@ -13,7 +15,7 @@ public class Hand : MonoBehaviour
     private float gripCurrent;
     private float triggerCurrent;
     [SerializeField] private float speed = 0.05f;
-
+    [SerializeField] private TextMeshProUGUI debugText;
     private string animatorGripParam = "Grip";
     private string animatorTriggerParam = "Trigger";
     // Start is called before the first frame update
@@ -55,6 +57,8 @@ public class Hand : MonoBehaviour
 
     public void ToggleVisibility()
     {
-        mesh.enabled = !mesh.enabled;
+        
+        mesh.enabled = !mesh.enabled;    
+        
     }
 }
