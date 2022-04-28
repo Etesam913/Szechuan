@@ -7,10 +7,10 @@
 - [x] Cross of blackboard when dish is complete & plated (Etesam)
 - [ ] Create refrigerator that opens and closes on select (Mikey)
 - [ ] Put all ingredients in refrigerator (Mikey)
-- [ ] Add people/walls to restaurant (Elan)
+- [x] Add people/walls to restaurant (Elan)
   - People walking around, point loss on bumping into them, plate will drop
   - Complete scenery walls with some art
-- [ ] When all dishes are in their plates then the player spawns in the second stage (waiter)(Elan)
+- [x] When all dishes are in their plates then the player spawns in the second stage (waiter)(Elan)
   - Fade out screen
   - Display text “Level is Complete”
   - Next stage button will take you to waiter stage
