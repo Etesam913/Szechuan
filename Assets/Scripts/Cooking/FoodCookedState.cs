@@ -6,8 +6,8 @@ public class FoodCookedState : MonoBehaviour
 {
     private float timeCooked = 0.0f;
 
-    [SerializeField] private float cookedTime;
-    [SerializeField] private float overcookedTime;
+    static public float cookedTime;
+    static public float overcookedTime;
 
     [SerializeField] private Material cookedMat;
     [SerializeField] private Material overcookedMat;
