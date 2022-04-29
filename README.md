@@ -5,8 +5,8 @@
 - [x] Add pasta dish (Etesam)
 - [x] Add ability to add oil to pan (Etesam)
 - [x] Cross of blackboard when dish is complete & plated (Etesam)
-- [ ] Create refrigerator that opens and closes on select (Mikey)
-- [ ] Put all ingredients in refrigerator (Mikey)
+- [x] Create refrigerator that opens and closes on select (Mikey)
+- [x] Put all ingredients in refrigerator (Mikey)
 - [ ] Add people/walls to restaurant (Elan)
   - People walking around, point loss on bumping into them, plate will drop
   - Complete scenery walls with some art
