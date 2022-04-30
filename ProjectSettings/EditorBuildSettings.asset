@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Busboy.unity
+    guid: 9a43fce05a744324bac603891f200503
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f3c716b1951164fbab4c0d8abad53f2e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ff6ac7509cca44b78b7aeda97df4ba43, type: 2}
