@@ -55,6 +55,9 @@ TagManager:
   - Carrot
   - Garlic
   - Mushroom
+  - PlateBowlBusboy
+  - WaterOn
+  - floor_busboy
   layers:
   - Default
   - TransparentFX
