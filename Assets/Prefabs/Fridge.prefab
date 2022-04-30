@@ -688,8 +688,7 @@ GameObject:
   - component: {fileID: 5180798752725564497}
   - component: {fileID: 4731676415482928626}
   - component: {fileID: 635316704691544210}
-  - component: {fileID: 1500643520}
-  - component: {fileID: 1500643521}
+  - component: {fileID: 2982345269028145836}
   m_Layer: 0
   m_Name: fridge_door
   m_TagString: Untagged
@@ -774,23 +773,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6840c00c49703904788dc000ca1cea35, type: 3}
---- !u!54 &1500643520
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730159094270927304}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1500643521
+--- !u!114 &2982345269028145836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -832,7 +815,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130644038}
+      - m_Target: {fileID: 383419016365806751}
         m_TargetAssemblyTypeName: OpenCloseDoor, Assembly-CSharp
         m_MethodName: ToggleDoor
         m_Mode: 1
@@ -1269,9 +1252,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2429330270054624024}
-  - component: {fileID: 2130644038}
+  - component: {fileID: 383419016365806751}
   m_Layer: 0
-  m_Name: fridge
+  m_Name: Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1332,7 +1315,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2130644038
+--- !u!114 &383419016365806751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

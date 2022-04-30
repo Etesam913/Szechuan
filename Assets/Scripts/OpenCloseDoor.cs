@@ -21,6 +21,8 @@ public class OpenCloseDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("space")) ToggleDoor();
+
         if(elapsedFrames <= interpolationFramesCount)
         {
             float interpolationRatio = (float)elapsedFrames / interpolationFramesCount;
