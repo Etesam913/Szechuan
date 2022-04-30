@@ -8,11 +8,14 @@ public class NextLevelScript : MonoBehaviour
     public GameObject origin;
     public GameObject nlCanvas;
     public GameObject blackScreen;
+    public GameObject waiterWrapper;
+
+    private WaiterPathLogic myWaiterPathLogic;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        myWaiterPathLogic = waiterWrapper.GetComponent<WaiterPathLogic>();
     }
 
     // Update is called once per frame
@@ -27,5 +30,6 @@ public class NextLevelScript : MonoBehaviour
         origin.transform.position = new Vector3(-1.153372f, -0.9505002f, 41.49769f);
         origin.transform.eulerAngles = new Vector3(origin.transform.eulerAngles.x, 180f, origin.transform.eulerAngles.z);
         nlCanvas.SetActive(false);
+        myWaiterPathLogic.startWaiterStage();
     }
 }

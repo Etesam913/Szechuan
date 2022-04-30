@@ -21,6 +21,8 @@ public class character_Ctrl : MonoBehaviour
     {
         if (animator)
         {
+            transform.Rotate(Vector3.up, -120f * Time.deltaTime);
+            animator.SetInteger("head_turn", 1);
         //----WALK----
             if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
             {
@@ -133,9 +135,9 @@ public class character_Ctrl : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
             }
             //RESET Y position
-            if (transform.localPosition.y > 0)
+            if (transform.localPosition.y > -0.95)
                 transform.localPosition = Vector3.Slerp(transform.localPosition,
-                    new Vector3(transform.localPosition.x, 0, transform.localPosition.z), 0.5f * Time.deltaTime);
+                    new Vector3(transform.localPosition.x, -0.95f, transform.localPosition.z), 0.5f * Time.deltaTime);
         }
     }
 }
