@@ -5,7 +5,7 @@ using UnityEngine;
 public class PanCookingInteractions : MonoBehaviour
 {
     public GameObject foodParent;
-
+    static public bool interact = false;
     private string stoveTriggerName = "stove_trigger";
     private bool cooking = false;
 
@@ -25,9 +25,14 @@ public class PanCookingInteractions : MonoBehaviour
                 var food = childTrans.gameObject;
                 var cookedState = food.GetComponent<FoodCookedState>();
                 if (cookedState != null)
+                {
                     cookedState.IncreaseTimeCooked(dt);
-                else {
+                    interact = true;
+                }
+                else
+                {
                     cookedState.NoInteraction();
+                    interact = false;
                 }
             }
         }
