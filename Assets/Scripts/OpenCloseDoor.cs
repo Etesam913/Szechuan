@@ -8,20 +8,31 @@ public class OpenCloseDoor : MonoBehaviour
     [SerializeField] private Vector3 CLOSED_ANGLES;
     [SerializeField] private Vector3 OPEN_ANGLES;
 
-    private int interpolationFramesCount = 35;
+    [SerializeField] private AudioSource openDoorAudio;    
+    [SerializeField] private float openDoorAudioStartFrame = 0;   
+
+    [SerializeField] private AudioSource closeDoorAudio;
+    [SerializeField] private float closeDoorAudioStartFrame = 35;    
+
+    [SerializeField] private int interpolationFramesCount = 50;
     private int elapsedFrames;
 
     public Transform doorAxis;
     // Start is called before the first frame update
     void Start()
     {
-        elapsedFrames = interpolationFramesCount;
+        elapsedFrames = interpolationFramesCount + 1;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("space")) ToggleDoor();
+
+        if(elapsedFrames == closeDoorAudioStartFrame && !doorOpen)
+            closeDoorAudio.Play();
+        else if(elapsedFrames == openDoorAudioStartFrame && doorOpen)
+            openDoorAudio.Play();
 
         if(elapsedFrames <= interpolationFramesCount)
         {
