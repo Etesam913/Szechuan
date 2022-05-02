@@ -7,7 +7,8 @@ public class PanCookingInteractions : MonoBehaviour
     public GameObject foodParent;
     static public bool interact = false;
     private string stoveTriggerName = "stove_trigger";
-    private bool cooking = false;
+    private bool onStove = false;
+    [SerializeField] private ParticleSystem smoke;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class PanCookingInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cooking) // Pan is on stove
+        if(onStove)
         {
             float dt = Time.deltaTime;
             foreach(Transform childTrans in foodParent.transform)
@@ -42,7 +43,8 @@ public class PanCookingInteractions : MonoBehaviour
     {
         if(other.name.Equals(stoveTriggerName))
         {
-            cooking = true;
+            onStove = true;
+            smoke.Play();
         }
     }
 
@@ -50,8 +52,8 @@ public class PanCookingInteractions : MonoBehaviour
     {
         if(other.name.Equals(stoveTriggerName))
         {
-            cooking = false;
+            onStove = false;
+            smoke.Stop();
         }
     }
-
 }

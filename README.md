@@ -10,7 +10,7 @@
   - Shows points (can be a placeholder value for time being as the point values are not determined yet)
 - Quality of life features (Mikey)
   - [ ] Sounds for things like putting pan on stove, opening refrigerator, etc
-  - [ ] Fire particles to show cooking when pan is on stove
+  - [x] Smoke particles to show cooking when pan is on stove
   - [ ] Have people that sit at table
   - [x] Add a pantry that can be opened 
 - Tutorial Level (Sai)
