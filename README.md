@@ -14,11 +14,11 @@
   - [ ] Have people that sit at table
   - [x] Add a pantry that can be opened 
 - Tutorial Level (Sai)
-  - [ ] When level 1 begins there is a tutorial panel which describes what you need to do in the game
+  - [x] When level 1 begins there is a tutorial panel which describes what you need to do in the game
   - [ ] Tutorial can be skipped
   - [ ] More UI buttons and interfaces
   - [x] BusBoy Stage
-  - [ ] LGrab; RGrab
+  - [x] LGrab; RGrab
 
 ## Week 3 Tasks
 
