@@ -7,6 +7,8 @@ public class Timer_button : MonoBehaviour
 {
     static private float score = 0f;
     static public Text Score;
+    static public bool slidercall = false;
+    static public bool slidercall_b = false;
     // Start is called before the first frame update
     public int temp = 12;
     void Start()
@@ -24,7 +26,7 @@ public class Timer_button : MonoBehaviour
     static public void dashboard(float timer) {
         if (timer > 0)
         {
-            score = 0f;
+            score = timer;
         }
         else {
             score = timer;

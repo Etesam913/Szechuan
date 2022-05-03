@@ -17,7 +17,7 @@ public class slidertimer : MonoBehaviour
     {
         if (PanCookingInteractions.interact)
         {
-            AudioSlider.value += Time.deltaTime / FoodCookedState.cookedTime;
+            AudioSlider.value += Time.deltaTime / FoodCookedState.cT_store;
         }
         else {
             AudioSlider.value = 0;
