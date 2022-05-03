@@ -8,6 +8,7 @@ public class water_script : MonoBehaviour
     private int updates_time;
     public GameObject sphere;
     public Animator animator;
+    public GameObject RespWater;
     void Start()
     {
         updates_time = 0;
@@ -16,7 +17,8 @@ public class water_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lerpcolor.is_water_on || lerpcolor_mug.is_water_on)
+        if ((lerpcolor.is_water_on || lerpcolor_mug.is_water_on) && 
+            (RespWater.GetComponent<MeshRenderer>().enabled == true))
         {
             updates_time += 1;
             if (((updates_time % 90) == 0) || ((updates_time % 91) == 0) || ((updates_time % 92) == 0) ||
@@ -40,6 +42,7 @@ public class water_script : MonoBehaviour
         }
         else {
             updates_time = 0;
+            
         }
     }
 }
