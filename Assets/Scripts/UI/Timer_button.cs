@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Timer_button : MonoBehaviour
 {
     static private float score = 0f;
+    static public bool slidercall = false;
+    static public bool slidercall_b = false;
     static public Text Score;
     // Start is called before the first frame update
     public int temp = 12;
@@ -24,7 +26,7 @@ public class Timer_button : MonoBehaviour
     static public void dashboard(float timer) {
         if (timer > 0)
         {
-            score = 0f;
+            score = timer;
         }
         else {
             score = timer;

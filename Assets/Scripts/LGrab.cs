@@ -24,7 +24,12 @@ public class LGrab : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().useGravity = false;
             hold = true;
         }
-        
+        if (other.gameObject.tag == "Interactable")
+        {
+            other.isTrigger = true;
+            other.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -35,7 +40,11 @@ public class LGrab : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().useGravity = false;
             hold = true;
         }
-
+        if (other.gameObject.tag == "Interactable")
+        {
+            other.isTrigger = true;
+            other.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -46,7 +55,11 @@ public class LGrab : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().useGravity = true;
             hold = false;
         }
-
+        if (other.gameObject.tag == "Interactable")
+        {
+            other.isTrigger = false;
+            other.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        }
     }
 
 }

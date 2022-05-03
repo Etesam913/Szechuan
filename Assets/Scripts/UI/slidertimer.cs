@@ -7,21 +7,24 @@ public class slidertimer : MonoBehaviour
 {
     // Start is called before the first frame update
     public Slider AudioSlider;
+
     void Start()
     {
-        AudioSlider.value = 0;
+        AudioSlider.value = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PanCookingInteractions.interact)
-        {
-            AudioSlider.value += Time.deltaTime / FoodCookedState.cookedTime;
-        }
-        else {
-            AudioSlider.value = 0;
-        }
+            if (PanCookingInteractions.interact)
+            {
+                AudioSlider.value += Time.deltaTime / FoodCookedState.cT_store;
+            }
+            else
+            {
+                AudioSlider.value = 0f;
+            }
         
     }
+
 }

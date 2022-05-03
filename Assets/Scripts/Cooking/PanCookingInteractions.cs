@@ -18,10 +18,10 @@ public class PanCookingInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(onStove)
+        if (onStove)
         {
             float dt = Time.deltaTime;
-            foreach(Transform childTrans in foodParent.transform)
+            foreach (Transform childTrans in foodParent.transform)
             {
                 var food = childTrans.gameObject;
                 var cookedState = food.GetComponent<FoodCookedState>();
@@ -30,13 +30,20 @@ public class PanCookingInteractions : MonoBehaviour
                     cookedState.IncreaseTimeCooked(dt);
                     interact = true;
                 }
-                else
+                /*else
                 {
                     cookedState.NoInteraction();
                     interact = false;
-                }
+                }*/
             }
         }
+        else 
+        {
+            Red_oucook.redon();
+            Green_perfection.greenoff();
+            interact = false;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,6 +53,7 @@ public class PanCookingInteractions : MonoBehaviour
             onStove = true;
             smoke.Play();
         }
+
     }
 
     private void OnTriggerExit(Collider other)
