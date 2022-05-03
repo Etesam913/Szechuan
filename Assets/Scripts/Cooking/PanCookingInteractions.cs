@@ -32,12 +32,13 @@ public class PanCookingInteractions : MonoBehaviour
                     cookedState.IncreaseTimeCooked(dt);
                     interact = true;
                 }
-                else
-                {
-                    cookedState.NoInteraction();
-                    interact = false;
-                }
             }
+        }
+        else
+        {
+            Red_oucook.redon();
+            Green_perfection.greenoff();
+            interact = false;
         }
     }
 
