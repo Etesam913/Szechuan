@@ -5,7 +5,8 @@ using UnityEngine;
 public class Green_perfection : MonoBehaviour
 {
     // Start is called before the first frame update
-    private CanvasGroup canvasGroup;
+    static private CanvasGroup canvasGroup;
+    static public bool green_on = false;
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -15,14 +16,34 @@ public class Green_perfection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FoodCookedState.perfection_cook)
+        /*if (PanCookingInteractions.interact)
         {
-            canvasGroup.alpha = 1;
-        }
-        else {
             canvasGroup.alpha = 0;
+            green_on = false;
         }
+        else
+        {
+            if (FoodCookedState.perfection_cook)
+            {
+                canvasGroup.alpha = 1;
+                green_on = true;
+            }
+            else
+            {
+                canvasGroup.alpha = 0;
+                green_on = false;
+            }
+        }*/
 
 
+    }
+
+    static public void greenon() {
+        canvasGroup.alpha = 1;
+    }
+
+    static public void greenoff()
+    {
+        canvasGroup.alpha = 0;
     }
 }
