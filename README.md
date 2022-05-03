@@ -18,7 +18,7 @@
   - [ ] Tutorial can be skipped
   - [ ] More UI buttons and interfaces
   - [x] BusBoy Stage
-  - [ ] LGrab; RGrab
+  - [x] LGrab; RGrab
 
 ## Week 3 Tasks
 
