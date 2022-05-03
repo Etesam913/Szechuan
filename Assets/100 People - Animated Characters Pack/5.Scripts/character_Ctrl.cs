@@ -4,25 +4,79 @@
 ******/
 
 using UnityEngine;
+using System;
 
 public class character_Ctrl : MonoBehaviour
 {
+    private float moving_speed = 5f;
     private Animator animator;
+    public GameObject origin;
+    private Vector3 resetPos;
+    private Vector3 resetRot;
+    private bool reset = false;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.speed = Random.Range(0.8f, 1.0f);
+        animator.speed = UnityEngine.Random.Range(0.8f, 1.0f);
     }
 
+    /*
+    The moving woman's position is taken. If she is close enough to the
+    player, a collision is called and an action (currently, a happy dance)
+    occurs. When that action finishes, the woman goes back into her moving
+    cycle.
+    The cycle is a square, and she turns 90 degrees on the Y axis after reaching
+    a certain X or Z point, such that she perpetually moves in a circle.
+    Her speed can be set with the moving_speed variable.
+    */
     // Update is called once per frame
     void Update()
     {
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("happy_dance") &&
+            Math.Abs(origin.transform.position.x - transform.position.x) < 0.6f && Math.Abs(origin.transform.position.z - transform.position.z) < 0.6f) {
+            reset = true;
+            resetPos = transform.position;
+            resetRot = transform.eulerAngles;
+            animator.SetTrigger("happy_dance");
+        } else {
+            if (reset && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("happy_dance")) {
+                transform.position = resetPos;
+                transform.eulerAngles = resetRot;
+                reset = false;
+            }
+            transform.Translate(Vector3.forward * Time.deltaTime * moving_speed);
+            //transform.Rotate(Vector3.right * Time.deltaTime);
+            //(25, -25), 12, 33
+            if (transform.position.x < -25) {
+                Vector3 newPos = new Vector3(-24.9f, transform.position.y, transform.position.z);
+                transform.position = newPos;
+                Vector3 newRot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                transform.eulerAngles = newRot;
+            }
+            if (transform.position.x > 25) {
+                Vector3 newPos = new Vector3(24.9f, transform.position.y, transform.position.z);
+                transform.position = newPos;
+                Vector3 newRot = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                transform.eulerAngles = newRot;
+            }
+            if (transform.position.z < 12) {
+                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, 12.1f);
+                transform.position = newPos;
+                Vector3 newRot = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                transform.eulerAngles = newRot;
+            }
+            if (transform.position.z > 33) {
+                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, 32.9f);
+                transform.position = newPos;
+                Vector3 newRot = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                transform.eulerAngles = newRot;
+            }
+        }
+
         if (animator)
-        {
-            transform.Rotate(Vector3.up, -120f * Time.deltaTime);
-            animator.SetInteger("head_turn", 1);
+        {   
         //----WALK----
             if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
             {
@@ -140,4 +194,5 @@ public class character_Ctrl : MonoBehaviour
                     new Vector3(transform.localPosition.x, -0.95f, transform.localPosition.z), 0.5f * Time.deltaTime);
         }
     }
+
 }
