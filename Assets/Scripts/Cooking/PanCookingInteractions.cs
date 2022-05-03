@@ -10,6 +10,8 @@ public class PanCookingInteractions : MonoBehaviour
     private bool onStove = false;
     [SerializeField] private ParticleSystem smoke;
 
+    [SerializeField] private AudioSource panHeatingAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,7 @@ public class PanCookingInteractions : MonoBehaviour
         {
             onStove = true;
             smoke.Play();
+            panHeatingAudio.Play();
         }
     }
 
@@ -54,6 +57,7 @@ public class PanCookingInteractions : MonoBehaviour
         {
             onStove = false;
             smoke.Stop();
+            panHeatingAudio.Stop();
         }
     }
 }
