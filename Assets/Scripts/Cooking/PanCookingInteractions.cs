@@ -5,19 +5,11 @@ using UnityEngine;
 public class PanCookingInteractions : MonoBehaviour
 {
     public GameObject foodParent;
-    static public bool interact = false;
     private string stoveTriggerName = "stove_trigger";
     private bool onStove = false;
     [SerializeField] private ParticleSystem smoke;
-
     [SerializeField] private AudioSource panHeatingAudio;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if(onStove)
@@ -30,15 +22,8 @@ public class PanCookingInteractions : MonoBehaviour
                 if (cookedState != null)
                 {
                     cookedState.IncreaseTimeCooked(dt);
-                    interact = true;
                 }
             }
-        }
-        else
-        {
-            Red_oucook.redon();
-            Green_perfection.greenoff();
-            interact = false;
         }
     }
 
