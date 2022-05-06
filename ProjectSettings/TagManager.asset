@@ -55,6 +55,20 @@ TagManager:
   - Carrot
   - Garlic
   - Mushroom
+  - WaterOn
+  - PlateBowlBusboy
+  - Arrow
+  - Fridge
+  - Arrow2
+  - Arrow3
+  - Arrow4
+  - Pan
+  - Board
+  - Knife
+  - Stove
+  - FridgeDoor
+  - Table
+  - Floor
   layers:
   - Default
   - TransparentFX

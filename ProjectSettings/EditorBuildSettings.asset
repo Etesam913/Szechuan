@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/VrTunnellingPro/Examples/VRTP_Example.unity
+    guid: ff6fcede7113ca34eb037df82d0dd5e1
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 310ad38c47316694082eadc579f053f4
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Busboy.unity
     guid: 9a43fce05a744324bac603891f200503

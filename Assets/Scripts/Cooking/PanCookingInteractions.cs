@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PanCookingInteractions : MonoBehaviour
 {
@@ -44,11 +45,19 @@ public class PanCookingInteractions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name.Equals(stoveTriggerName))
+        if (other.name.Equals(stoveTriggerName))
         {
             onStove = true;
             smoke.Play();
             panHeatingAudio.Play();
+        }
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Tutorial")
+        {
+            if (Board_Tutorial.boardDone == true && (onStove)) {
+                Stove_Tutorial.stoveDone = true;
+            }
+            
         }
     }
 
