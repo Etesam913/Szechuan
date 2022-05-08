@@ -1,12 +1,32 @@
 # Szechuan
 
+## Week 4 Tasks
+- [ ] Cutting vegetables (Etesam)
+- [ ] Separate game into levels
+  - Level 1: Sauteed vegetables
+  - Level 2: Pasta Penne
+- [ ] Level Completion Screen (Elan)
+  - Allows you to go to next level
+  - Shows points (can be a placeholder value for time being as the point values are not determined yet)
+- Quality of life features (Mikey)
+  - [x] Sounds for things like putting pan on stove, opening refrigerator, etc
+  - [x] Smoke particles to show cooking when pan is on stove
+  - [ ] Have people that sit at table
+  - [x] Add a pantry that can be opened 
+- Tutorial Level (Sai)
+  - [ ] When level 1 begins there is a tutorial panel which describes what you need to do in the game
+  - [ ] Tutorial can be skipped
+  - [ ] More UI buttons and interfaces
+  - [x] BusBoy Stage
+  - [x] LGrab; RGrab
+
 ## Week 3 Tasks
 
 - [x] Add pasta dish (Etesam)
 - [x] Add ability to add oil to pan (Etesam)
 - [x] Cross of blackboard when dish is complete & plated (Etesam)
-- [ ] Create refrigerator that opens and closes on select (Mikey)
-- [ ] Put all ingredients in refrigerator (Mikey)
+- [x] Create refrigerator that opens and closes on select (Mikey)
+- [x] Put all ingredients in refrigerator (Mikey)
 - [x] Add people/walls to restaurant (Elan)
   - People walking around, point loss on bumping into them, plate will drop
   - Complete scenery walls with some art
@@ -14,7 +34,7 @@
   - Fade out screen
   - Display text “Level is Complete”
   - Next stage button will take you to waiter stage
-- [ ] Field of View (FOV - blur the unimportant corners when moving: Motion Sickness) (Sai)
+- [x] Field of View (FOV - blur the unimportant corners when moving: Motion Sickness) (Sai)
 
 ## Week 2 Tasks
 

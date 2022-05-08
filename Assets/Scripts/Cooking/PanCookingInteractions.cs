@@ -1,23 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PanCookingInteractions : MonoBehaviour
 {
     public GameObject foodParent;
-
     private string stoveTriggerName = "stove_trigger";
-    private bool cooking = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
+    private bool onStove = false;
+    [SerializeField] private ParticleSystem smoke;
+    [SerializeField] private AudioSource panHeatingAudio;
+    
     void Update()
     {
-        if(cooking) // Pan is on stove
+        if(onStove)
         {
             float dt = Time.deltaTime;
             foreach(Transform childTrans in foodParent.transform)
@@ -25,9 +20,8 @@ public class PanCookingInteractions : MonoBehaviour
                 var food = childTrans.gameObject;
                 var cookedState = food.GetComponent<FoodCookedState>();
                 if (cookedState != null)
+                {
                     cookedState.IncreaseTimeCooked(dt);
-                else {
-                    cookedState.NoInteraction();
                 }
             }
         }
@@ -37,7 +31,18 @@ public class PanCookingInteractions : MonoBehaviour
     {
         if(other.name.Equals(stoveTriggerName))
         {
-            cooking = true;
+            onStove = true;
+            smoke.Play();
+            panHeatingAudio.Play();
+        }
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Tutorial")
+        {
+            if (Board_Tutorial.boardDone == true && (onStove))
+            {
+                Stove_Tutorial.stoveDone = true;
+            }
+
         }
     }
 
@@ -45,8 +50,9 @@ public class PanCookingInteractions : MonoBehaviour
     {
         if(other.name.Equals(stoveTriggerName))
         {
-            cooking = false;
+            onStove = false;
+            smoke.Stop();
+            panHeatingAudio.Stop();
         }
     }
-
 }
