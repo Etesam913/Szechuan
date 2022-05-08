@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PanCookingInteractions : MonoBehaviour
 {
     public GameObject foodParent;
@@ -34,6 +34,15 @@ public class PanCookingInteractions : MonoBehaviour
             onStove = true;
             smoke.Play();
             panHeatingAudio.Play();
+        }
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Tutorial")
+        {
+            if (Board_Tutorial.boardDone == true && (onStove))
+            {
+                Stove_Tutorial.stoveDone = true;
+            }
+
         }
     }
 
