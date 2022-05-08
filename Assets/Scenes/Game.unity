@@ -13559,6 +13559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f096e54f4cec98846a61d17cd507386c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tap: {fileID: 0}
 --- !u!114 &927084109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18578,6 +18579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d930772b58b0a5a4d85442587a9c5a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tap: {fileID: 0}
 --- !u!114 &1247337138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31026,7 +31028,7 @@ MonoBehaviour:
   m_System: {fileID: 1926965385}
   m_TurnSpeed: 60
   m_LeftHandTurnAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Left Hand Turn
       m_Type: 0
@@ -31080,7 +31082,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RightHandMoveAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Right Hand Move
       m_Type: 0
