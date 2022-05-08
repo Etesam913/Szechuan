@@ -8826,7 +8826,7 @@ MonoBehaviour:
   _dishPanel2: {fileID: 565168563}
   origin: {fileID: 1649697708}
   nlCanvas: {fileID: 1255689023}
-  blackScreen: {fileID: 782053787}
+  blackScreen: {fileID: 315095379}
   tasks:
   - name: Sauteed Vegetables
     ingredients:
@@ -19944,7 +19944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {fileID: 1649697708}
   nlCanvas: {fileID: 1255689023}
-  blackScreen: {fileID: 782053787}
+  blackScreen: {fileID: 315095379}
   waiterWrapper: {fileID: 561972780}
 --- !u!4 &1264238910
 Transform:
