@@ -26,19 +26,21 @@ namespace UI
     {
         [SerializeField] private Transform _dishPanel1;
         [SerializeField] private Transform _dishPanel2;
-        public GameObject origin;
-        public GameObject nlCanvas;
-        public GameObject blackScreen;
         public List<Task> tasks = new List<Task>();
         private TextMeshProUGUI panel1DishName;
         private List<TextMeshProUGUI> panel1IngredientTexts = new List<TextMeshProUGUI>();
         private TextMeshProUGUI panel2DishName;
         List<TextMeshProUGUI> panel2IngredientTexts = new List<TextMeshProUGUI>();
-        private bool chefTasksComplete = false;
-        private bool fadeToBlack = false;
+        private bool secondTaskAdded = false;
+        public bool chefTasksComplete = false;
+
+        public GameObject waiterWrapper;
+        private WaiterPathLogic myWaiterPathLogic;
 
         void Start()
         {
+            myWaiterPathLogic = waiterWrapper.GetComponent<WaiterPathLogic>();
+
             _dishPanel1.gameObject.SetActive(false);
             _dishPanel2.gameObject.SetActive(false);
             if (tasks.Count > 0)
@@ -59,8 +61,83 @@ namespace UI
 
                 TextMeshProUGUI panel1TimeRemaining = _dishPanel1.GetChild(9).GetComponent<TextMeshProUGUI>();
                 panel1TimeRemaining.text = tasks[0].timeRemaining.ToString();
+            }
+        }
 
-                if (tasks.Count == 2)
+        void Update()
+        {
+            
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                // Strikethrough task on blackboard if it is complete
+                if (tasks[i].isCompleted)
+                {
+                    List<TextMeshProUGUI> textToStrikeThrough =
+                        new List<TextMeshProUGUI>(i == 0 ? panel1IngredientTexts : panel2IngredientTexts);
+                    textToStrikeThrough.Add(i == 0 ? panel1DishName : panel2DishName);
+                    for (int j = 0; j < textToStrikeThrough.Count; j++)
+                    {
+                        textToStrikeThrough[j].fontStyle = FontStyles.Strikethrough;
+                    }
+                }
+            }
+
+            /*
+            If the first task is completed, we set the waiter
+            stage in motion, and add the second task to the
+            blackboard. If that task finishes, we set all chef
+            tasks to complete, and the next level script is told
+            that the game is over since chefTasksComplete = true.
+            */
+            if (tasks.Count > 0 && !chefTasksComplete) {
+                bool allTasksComplete = true;
+                foreach (Task t in tasks) {
+                    if (!t.isCompleted) {
+                        allTasksComplete = false;
+                    }
+                }
+
+                if (allTasksComplete && tasks.Count == 2) {
+                    chefTasksComplete = true;
+                }
+
+                if (allTasksComplete) {
+                    myWaiterPathLogic.chooseNewTable();
+                    if (!secondTaskAdded) {
+                        addSecondTask();
+                        secondTaskAdded = true;
+                    }
+                }
+            }
+        }
+
+        /*
+        This appends a second task to the blackboard.
+        */
+        void addSecondTask() {
+            print("TASK: " + tasks[0]);
+            Task t2 = new Task();
+            t2.name = "Sauteed Vegetables";
+            Ingredient i1 = new Ingredient();
+            i1.name = "Carrots";
+            i1.quantity = 2;
+            i1.plateIdentifier = "sliced_carrot";
+            Ingredient i2 = new Ingredient();
+            i2.name = "Onion";
+            i2.quantity = 1;
+            i2.plateIdentifier = "sliced_onions";
+            Ingredient i3 = new Ingredient();
+            i3.name = "Bell Pepper";
+            i3.quantity = 1;
+            i3.plateIdentifier = "sliced_bell_pepper";
+            t2.ingredients.Add(i1);
+            t2.ingredients.Add(i2);
+            t2.ingredients.Add(i3);
+            t2.timeRemaining = 35;
+            t2.isCompleted = false;
+            tasks.Add(t2);
+
+            if (tasks.Count == 2)
                 {
                     _dishPanel2.gameObject.SetActive(true);
                     // Get references & update values of task board texts
@@ -78,56 +155,7 @@ namespace UI
                     TextMeshProUGUI panel2TimeRemaining = _dishPanel2.GetChild(9).GetComponent<TextMeshProUGUI>();
                     panel2TimeRemaining.text = tasks[1].timeRemaining.ToString();
                 }
-            }
-        }
 
-        void Update()
-        {
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                // Strikethrough task on blackboard if it is complete
-                if (tasks[i].isCompleted)
-                {
-                    List<TextMeshProUGUI> textToStrikeThrough =
-                        new List<TextMeshProUGUI>(i == 0 ? panel1IngredientTexts : panel2IngredientTexts);
-                    textToStrikeThrough.Add(i == 0 ? panel1DishName : panel2DishName);
-                    for (int j = 0; j < textToStrikeThrough.Count; j++)
-                    {
-                        textToStrikeThrough[j].fontStyle = FontStyles.Strikethrough;
-                    }
-                }
-            }
-
-            //If the player has completed all the tasks for the first time,
-            //we move them far away and active the next level canvas.
-            if (tasks.Count > 0 && !chefTasksComplete) {
-                bool allTasksComplete = true;
-                foreach (Task t in tasks) {
-                    if (!t.isCompleted) {
-                        allTasksComplete = false;
-                    }
-                }
-
-                if (allTasksComplete) {
-                    chefTasksComplete = true;
-                    fadeToBlack = true;
-                }
-            }
-
-            if (fadeToBlack) {
-                print(blackScreen.GetComponent<RawImage>().color.a);
-                if (blackScreen.GetComponent<RawImage>().color.a <= 1) {
-                    Color objectColor = blackScreen.GetComponent<RawImage>().color;
-                    float fadeAmount = objectColor.a + (0.5f * Time.deltaTime);
-                    blackScreen.GetComponent<RawImage>().color = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-                } else {
-                    fadeToBlack = false;
-                    Color objectColor = blackScreen.GetComponent<RawImage>().color;
-                    blackScreen.GetComponent<RawImage>().color = new Color(objectColor.r, objectColor.g, objectColor.b, 0f);
-                    origin.transform.position = new Vector3(100f, 100f, 100f);
-                    nlCanvas.SetActive(true);
-                }
-            }
         }
     }
 }
