@@ -1312,8 +1312,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tutorial:\n\nLevel1 -      Chef\nLevel2 -   Server\nLevel3 - BusBoy\n\nEXIT
-    TUTORIAL - \nCLICK HERE"
+  m_Text: "Go to the Real Game:\n\nLevel1 -      Chef\nLevel2 -   Server\nLevel3
+    - BusBoy\n\nEXIT TUTORIAL - \nCLICK HERE"
 --- !u!222 &125668232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17490,6 +17490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tap: {fileID: 787178408}
+  water: {fileID: 254833902}
 --- !u!114 &1186351735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24977,6 +24978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tap: {fileID: 787178408}
+  water: {fileID: 254833902}
 --- !u!114 &1541073619
 MonoBehaviour:
   m_ObjectHideFlags: 0

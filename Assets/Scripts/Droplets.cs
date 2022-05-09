@@ -14,7 +14,7 @@ public class Droplets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((lerpcolor.is_water_on || lerpcolor_mug.is_water_on) &&
+        if ((lerpcolor.is_water_on || lerpcolor_mug.is_water_on || RightSinkButt.flagbool != 0) &&
             (RespWater.GetComponent<MeshRenderer>().enabled == true))
         {
             GetComponent<MeshRenderer>().enabled = true;

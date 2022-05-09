@@ -6,6 +6,7 @@ public class RightSinkButt : MonoBehaviour
 {
     static public int flagbool = 0;
     public GameObject tap;
+    public GameObject water;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,20 +25,24 @@ public class RightSinkButt : MonoBehaviour
         {
             flagbool = 1;
             tap.transform.eulerAngles = new Vector3(0, 0, 20);
+            water.GetComponent<MeshRenderer>().enabled = true;
         }
         else if (flagbool == 1) {
             flagbool = 2;
             tap.transform.eulerAngles = new Vector3(0, 0, 40);
+            water.GetComponent<MeshRenderer>().enabled = true;
         }
         else if (flagbool == 2)
         {
             flagbool = 3;
             tap.transform.eulerAngles = new Vector3(0, 0, 60);
+            water.GetComponent<MeshRenderer>().enabled = true;
         }
         else if (flagbool == 3)
         {
             flagbool = 4;
             tap.transform.eulerAngles = new Vector3(0, 0, 80);
+            water.GetComponent<MeshRenderer>().enabled = true;
         }
 
 
