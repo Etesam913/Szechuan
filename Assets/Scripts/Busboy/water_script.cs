@@ -42,7 +42,9 @@ public class water_script : MonoBehaviour
         }
         else {
             updates_time = 0;
-            
+            animator.SetBool("water_anim", true);
+            sphere.GetComponent<MeshRenderer>().enabled = false;
+
         }
     }
 }
