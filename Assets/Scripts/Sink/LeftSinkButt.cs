@@ -5,6 +5,7 @@ using UnityEngine;
 public class LeftSinkButt : MonoBehaviour
 {
     public GameObject tap;
+    public GameObject water;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,22 +21,26 @@ public class LeftSinkButt : MonoBehaviour
     public void leftclick() {
         if (RightSinkButt.flagbool == 4)
         {
+            water.GetComponent<MeshRenderer>().enabled = true;
             RightSinkButt.flagbool = 3;
             tap.transform.eulerAngles = new Vector3(0, 0, 60);
         }
         else if (RightSinkButt.flagbool == 3)
         {
             RightSinkButt.flagbool = 2;
+            water.GetComponent<MeshRenderer>().enabled = true;
             tap.transform.eulerAngles = new Vector3(0, 0, 40);
         }
         else if (RightSinkButt.flagbool == 2)
         {
             RightSinkButt.flagbool = 1;
+            water.GetComponent<MeshRenderer>().enabled = true;
             tap.transform.eulerAngles = new Vector3(0, 0, 20);
         }
         else if (RightSinkButt.flagbool == 1)
         {
             RightSinkButt.flagbool = 0;
+            water.GetComponent<MeshRenderer>().enabled = false;
             tap.transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
