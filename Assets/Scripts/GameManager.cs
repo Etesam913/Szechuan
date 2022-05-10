@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public float points = 5f;
     // Start is called before the first frame update
     void Start()
     {

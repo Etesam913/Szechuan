@@ -24,7 +24,7 @@ public class NextLevelScript : MonoBehaviour
     private TextMeshProUGUI scoreText;
     private TextMeshProUGUI wellDoneText;
     private TextMeshProUGUI advanceText;
-    
+    [SerializeField] private GameManager gameManager; 
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,9 @@ public class NextLevelScript : MonoBehaviour
 
     //We move the player back to the restaurant and set
     //the black canvas to false.
-    public void advance() {
+    public void advance()
+    {
+        gameManager.points = 0f;
         if (myTaskManager.chefTasksComplete) {
             SceneManager.LoadScene("Game");
         }
