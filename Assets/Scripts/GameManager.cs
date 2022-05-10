@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public int currentTask = 0;
 
     public bool hasRunIntoPerson = false;
+
+    public bool hasAppliedReasons = false;
     // Start is called before the first frame update
     void Start()
     {

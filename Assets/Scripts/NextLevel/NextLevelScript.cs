@@ -57,6 +57,7 @@ public class NextLevelScript : MonoBehaviour
 
         gameManager.hasRunIntoPerson = false;
         gameManager.points = 20f;
+        gameManager.hasAppliedReasons = false;
         if (myTaskManager.chefTasksComplete) {
             SceneManager.LoadScene("Game");
         }
