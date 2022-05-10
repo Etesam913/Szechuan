@@ -17,7 +17,7 @@ public class water_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((lerpcolor.is_water_on || lerpcolor_mug.is_water_on) && 
+        if ((lerpcolor.is_water_on || lerpcolor_mug.is_water_on || RightSinkButt.flagbool !=0) && 
             (RespWater.GetComponent<MeshRenderer>().enabled == true))
         {
             updates_time += 1;
@@ -42,6 +42,8 @@ public class water_script : MonoBehaviour
         }
         else {
             updates_time = 0;
+            animator.SetBool("water_anim", true);
+            sphere.GetComponent<MeshRenderer>().enabled = false;
             
         }
     }
