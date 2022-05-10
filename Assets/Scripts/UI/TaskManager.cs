@@ -30,9 +30,6 @@ public class Task
     // deduct 2 points for lateness
 
     // if a food touched the ground deduct 1 point
-
-
-    public float points = 5f;
 }
 
 namespace UI
@@ -86,22 +83,26 @@ namespace UI
         {
             for (int i = 0; i < tasks.Count; i++)
             {
-                tasks[i].timeRemaining -= Time.deltaTime;
-                if (tasks[i].timeRemaining <= 0)
+                if (!tasks[i].isCompleted)
                 {
-                    tasks[i].timeRemaining = 0;
-                }
+                    tasks[i].timeRemaining -= Time.deltaTime;
+                    if (tasks[i].timeRemaining <= 0)
+                    {
+                        tasks[i].timeRemaining = 0;
+                    }
 
-                // counts down the timer
-                if (i == 0)
-                {
-                    dish1TimeText.text = tasks[0].timeRemaining.ToString("0");
-                }
+                    // counts down the timer
+                    if (i == 0)
+                    {
+                        dish1TimeText.text = tasks[0].timeRemaining.ToString("0");
+                    }
 
-                if (i == 1)
-                {
-                    dish2TimeText.text = tasks[1].timeRemaining.ToString("0");
+                    if (i == 1)
+                    {
+                        dish2TimeText.text = tasks[1].timeRemaining.ToString("0");
+                    }    
                 }
+                
                 
                 // Strikethrough task on blackboard if it is complete
                 if (tasks[i].isCompleted)
@@ -174,7 +175,7 @@ namespace UI
             t2.ingredients.Add(i1);
             t2.ingredients.Add(i2);
             t2.ingredients.Add(i3);
-            t2.timeRemaining = 35;
+            t2.timeRemaining = 160;
             t2.isCompleted = false;
             tasks.Add(t2);
 

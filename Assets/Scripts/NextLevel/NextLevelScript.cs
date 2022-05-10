@@ -46,14 +46,17 @@ public class NextLevelScript : MonoBehaviour
             wellDoneText.text = "You win!";
             advanceText.text = "Restart";
         }
-        
     }
 
     //We move the player back to the restaurant and set
     //the black canvas to false.
     public void advance()
     {
-        gameManager.points = 0f;
+        // moves onto next task
+        gameManager.currentTask += 1;
+
+        gameManager.hasRunIntoPerson = false;
+        gameManager.points = 20f;
         if (myTaskManager.chefTasksComplete) {
             SceneManager.LoadScene("Game");
         }

@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UI;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -22,11 +24,11 @@ public class PlateInteractable : MonoBehaviour
     public GameObject gameManager;
 
     public GameObject plateTrigger;
-
-    
+    private GameManager _gameManagerScript;
+    private TaskManager _taskManager;
     private WaiterPathLogic myWaiterPathLogic;
     private CookStateLogger myCookStateLogger;
-
+    [SerializeField] private TextMeshProUGUI reasons; 
     private bool fadeToBlack = false;
     
 
@@ -37,6 +39,8 @@ public class PlateInteractable : MonoBehaviour
     */
     void Start()
     {
+        _taskManager = gameManager.GetComponent<TaskManager>();
+        _gameManagerScript = gameManager.GetComponent<GameManager>();
         myWaiterPathLogic = waiterWrapper.GetComponent<WaiterPathLogic>();
         myCookStateLogger = gameManager.GetComponent<CookStateLogger>();
         platePosition = new Vector3(-4.277f, 0f, 41.326f);
@@ -92,6 +96,42 @@ public class PlateInteractable : MonoBehaviour
             
             //myWaiterPathLogic.chooseNewTable();
             print("Plate dropped on correct table: " + tableNumber.ToString() + "!");
+            reasons.text = "";
+            // game manager point decrements
+            Task currentTask = _taskManager.tasks[_gameManagerScript.currentTask];
+            if (currentTask.timeRemaining <= 0)
+            {
+                _gameManagerScript.points -= 8;
+                reasons.text += "-8 points for taking too long during cooking\n";
+            }
+            int numOfFood = plateTrigger.transform.childCount;
+            int numOfFoodNotCookedCorrectly = 0;
+            foreach (Transform child in plateTrigger.transform)
+            {
+                if (child.GetComponent<FoodCookedState>())
+                {
+                    FoodCookedState childCookState = child.GetComponent<FoodCookedState>();
+                    if (childCookState.cookState != FoodCookedState.CookState.Perfect)
+                    {
+                        numOfFoodNotCookedCorrectly += 1;
+                    }       
+                }
+            }
+
+            var cookingPointsToSubtract = (numOfFoodNotCookedCorrectly / numOfFood) * 8;
+            _gameManagerScript.points -= cookingPointsToSubtract;
+            if (cookingPointsToSubtract > 0)
+            {
+                reasons.text += "-" + cookingPointsToSubtract +
+                                " points for undercooking/overcooking food\n";
+            }
+            if (_gameManagerScript.hasRunIntoPerson)
+            {
+                _gameManagerScript.points -= 4;
+                reasons.text += "-4 points for running into a person";
+            }
+            
+            
             timerStarted = true;
             fadeToBlack = true;
             this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
