@@ -175,7 +175,7 @@ namespace UI
             t2.ingredients.Add(i1);
             t2.ingredients.Add(i2);
             t2.ingredients.Add(i3);
-            t2.timeRemaining = 160;
+            t2.timeRemaining = 260;
             t2.isCompleted = false;
             tasks.Add(t2);
 
