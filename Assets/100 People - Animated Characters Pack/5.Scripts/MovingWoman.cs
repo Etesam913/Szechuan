@@ -19,6 +19,7 @@ public class MovingWoman : MonoBehaviour
     private Vector3 resetPos;
     private Vector3 resetRot;
     private bool reset = false;
+    [SerializeField] private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,9 @@ public class MovingWoman : MonoBehaviour
     void Update()
     {
         if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("happy_dance") &&
-            Math.Abs(origin.transform.position.x - transform.position.x) < 0.6f && Math.Abs(origin.transform.position.z - transform.position.z) < 0.6f) {
+            Math.Abs(origin.transform.position.x - transform.position.x) < 0.6f && Math.Abs(origin.transform.position.z - transform.position.z) < 0.6f)
+        {
+            gameManager.hasRunIntoPerson = true;
             reset = true;
             resetPos = transform.position;
             resetRot = transform.eulerAngles;
