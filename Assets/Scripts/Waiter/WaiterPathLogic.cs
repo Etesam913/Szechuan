@@ -55,13 +55,6 @@ public class WaiterPathLogic : MonoBehaviour
     }
 
     /*
-    We fade to black and the user clicks advance to start the waiter stage.
-    */
-    public void fadeToBlack() {
-
-    }
-
-    /*
     When the game starts, we run choose new table and disappear the UI.
     */
     public void startWaiterStage() {

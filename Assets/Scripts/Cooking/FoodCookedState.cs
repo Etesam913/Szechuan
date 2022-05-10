@@ -12,14 +12,14 @@ public class FoodCookedState : MonoBehaviour
     [SerializeField] private Material cookedMat;
     [SerializeField] private Material overcookedMat;
 
-    enum CookState
+    public enum CookState
     {
         Undercooked,
         Perfect,
         Overcooked
     }
 
-    private CookState cookState = CookState.Undercooked;
+    public CookState cookState = CookState.Undercooked;
 
 
     public void IncreaseTimeCooked(float t)
