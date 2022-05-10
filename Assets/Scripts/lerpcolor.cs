@@ -57,7 +57,8 @@ public class lerpcolor : MonoBehaviour
         if (other.gameObject.tag == "WaterOn")
         {
             is_water_on = false;
-            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            if (RightSinkButt.flagbool == 0)
+                other.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
 
 
