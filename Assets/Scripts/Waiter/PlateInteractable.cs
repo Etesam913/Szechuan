@@ -98,38 +98,44 @@ public class PlateInteractable : MonoBehaviour
             print("Plate dropped on correct table: " + tableNumber.ToString() + "!");
             reasons.text = "";
             // game manager point decrements
-            Task currentTask = _taskManager.tasks[_gameManagerScript.currentTask];
-            if (currentTask.timeRemaining <= 0)
+            if (!_gameManagerScript.hasAppliedReasons)
             {
-                _gameManagerScript.points -= 8;
-                reasons.text += "-8 points for taking too long during cooking\n";
-            }
-            int numOfFood = plateTrigger.transform.childCount;
-            int numOfFoodNotCookedCorrectly = 0;
-            foreach (Transform child in plateTrigger.transform)
-            {
-                if (child.GetComponent<FoodCookedState>())
+                Task currentTask = _taskManager.tasks[_gameManagerScript.currentTask];
+                if (currentTask.timeRemaining <= 0)
                 {
-                    FoodCookedState childCookState = child.GetComponent<FoodCookedState>();
-                    if (childCookState.cookState != FoodCookedState.CookState.Perfect)
-                    {
-                        numOfFoodNotCookedCorrectly += 1;
-                    }       
+                    _gameManagerScript.points -= 8;
+                    reasons.text += "-8 points for taking too long during cooking\n";
                 }
-            }
+                int numOfFood = plateTrigger.transform.childCount;
+                int numOfFoodNotCookedCorrectly = 0;
+                foreach (Transform child in plateTrigger.transform)
+                {
+                    if (child.GetComponent<FoodCookedState>())
+                    {
+                        FoodCookedState childCookState = child.GetComponent<FoodCookedState>();
+                        if (childCookState.cookState != FoodCookedState.CookState.Perfect)
+                        {
+                            numOfFoodNotCookedCorrectly += 1;
+                        }       
+                    }
+                }
 
-            var cookingPointsToSubtract = (numOfFoodNotCookedCorrectly / numOfFood) * 8;
-            _gameManagerScript.points -= cookingPointsToSubtract;
-            if (cookingPointsToSubtract > 0)
-            {
-                reasons.text += "-" + cookingPointsToSubtract +
-                                " points for undercooking/overcooking food\n";
+                var cookingPointsToSubtract = (numOfFoodNotCookedCorrectly / numOfFood) * 8;
+                _gameManagerScript.points -= cookingPointsToSubtract;
+                if (cookingPointsToSubtract > 0)
+                {
+                    reasons.text += "-" + cookingPointsToSubtract +
+                                    " points for undercooking/overcooking food\n";
+                }
+                if (_gameManagerScript.hasRunIntoPerson)
+                {
+                    _gameManagerScript.points -= 4;
+                    reasons.text += "-4 points for running into a person";
+                }
+
+                _gameManagerScript.hasAppliedReasons = true;
             }
-            if (_gameManagerScript.hasRunIntoPerson)
-            {
-                _gameManagerScript.points -= 4;
-                reasons.text += "-4 points for running into a person";
-            }
+            
             
             
             timerStarted = true;
